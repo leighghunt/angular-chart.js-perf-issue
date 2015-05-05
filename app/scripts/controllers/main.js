@@ -11,23 +11,27 @@ angular.module('angularChartjsPerfIssueApp')
   .controller('MainCtrl', function ($interval, $scope) {
 
   	$scope.data = [
-  		[10,3],
-  		[10,4],
-  		[10,5],
-  		[10,6],
-  		[10,7],
-  		[10,8],
-  		[10,9],
-  		[10,10],
-  		[10,-1],
-  		[10,0],
-  		[10,1],
-  		[10,2],
+  		[3],
+  		[4],
+  		[5],
+  		[6],
+  		[7],
+  		[8],
+  		[9],
+  		[10],
+  		[-1],
+  		[-2],
+  		[-3],
+  		[-2],
+  		[-1],
+  		[0],
+  		[1],
+  		[2],
   	];
 
     $scope.index = 0;
 		$scope.voltages = [];
-    $scope.voltageLabels = ['A','B'];
+    $scope.voltageLabels = ['A'];
 
   	$scope.voltages[0] = $scope.data[$scope.index++];
 
