@@ -11,6 +11,7 @@
 angular
   .module('angularChartjsPerfIssueApp', [
     'ngAnimate',
+    'chart.js',
     'ngCookies',
     'ngResource',
     'ngRoute',
