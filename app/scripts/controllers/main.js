@@ -8,7 +8,7 @@
  * Controller of the angularChartjsPerfIssueApp
  */
 angular.module('angularChartjsPerfIssueApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($interval, $scope) {
 
   	$scope.data = [
   		[1,2,3,4,5,6,7,8,9,10],
@@ -27,17 +27,17 @@ angular.module('angularChartjsPerfIssueApp')
 		$scope.voltages = [];
     $scope.voltageLabels = ['A','B','C','D','E','F','G','H','I','J'];
 
-  	$scope.voltages[0] = $scope.data[++$scope.index];
+  	$scope.voltages[0] = $scope.data[$scope.index++];
 
 
-		setInterval(function () {
+		$interval(function () {
 	  	console.log('Tick');
 
-	  	if($scope.index>$scope.data.length){
+	  	if($scope.index>=$scope.data.length){
 	  		$scope.index = 0;
 	  	}
 
-	  	$scope.voltages[0] = $scope.data[++$scope.index];
+	  	$scope.voltages[0] = $scope.data[$scope.index++];
 	  	//console.log($scope.voltages);
 
 		}, 1000);
